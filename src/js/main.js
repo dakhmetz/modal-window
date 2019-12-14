@@ -25,5 +25,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   /* All good up here */
 
-
+  modal.addEventListener('mouseup', function(event) {
+    var menu = document.querySelector('.modal__dialog');
+    var menu2 = document.querySelector('.modal__form');
+    if((event.target != menu && event.target.parentNode != menu) && (event.target != menu2 && event.target.parentNode != menu2)) {
+      switchModal();
+    }
+  });
+ 
 });
