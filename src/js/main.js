@@ -12,4 +12,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   closeBtn.addEventListener('click', switchModal);
 
+  document.addEventListener('keypress', (event) =>{
+    console.log(event.code)
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if(e.keyCode === 27) {
+      console.log('Esc pressed')
+      switchModal();
+    }
+  }); 
+
+  /* All good up here */
+
+
 });
